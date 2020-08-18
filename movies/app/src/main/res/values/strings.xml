@@ -3,4 +3,9 @@
     <string name="action_popular">Most popular</string>
     <string name="action_rated">Most rated</string>
     <string name="content_description">Poster of a movie</string>
+    <string name="genres">Genres:</string>
+    <string name="popular">Most popular movies</string>
+    <string name="rated">Best rated movies</string>
+    <string name="no_conection_error">Error there is not an internet connection</string>
+    <string name="movie">Movie</string>
 </resources>
