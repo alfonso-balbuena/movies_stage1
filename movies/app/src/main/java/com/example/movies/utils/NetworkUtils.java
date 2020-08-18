@@ -13,16 +13,9 @@ import java.util.Scanner;
 
 public final class NetworkUtils {
 
-    private static class Page {
-        private Action last_action;
-        private int max_pages;
-        private int current_page;
-    }
-
     private final static String BASE_PATH = "https://api.themoviedb.org/3/movie/";
     private final static String POPULAR = "popular";
     private final static String RATED = "top_rated";
-    private static Page current_page = new Page();
     private final static String API_KEY = "";
 
 

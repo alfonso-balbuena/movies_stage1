@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetail">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_movie_detail_error"
+            android:text="@string/no_conection_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/content_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:padding="10sp" android:background="@color/colorPrimaryDark" >
+                <TextView
+                    android:id="@+id/tv_title_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:textColor="@color/textPrimaryDark"
+                    android:layout_margin="10sp"/>
+            </FrameLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toTopOf="@+id/tv_title_movie"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_movie"
+                android:padding="5dp"
+                android:layout_margin="5dp">
+
+                <TableRow>
+
+                    <ImageView
+                        android:layout_weight="1"
+                        android:id="@+id/iv_poster"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/content_description"/>
+
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/tv_released_date"
+                            android:textSize="20sp"
+                            />
+                        <TextView
+                            android:id="@+id/tv_vote"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="@string/genres"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" />
+                    <TextView android:id="@+id/tv_genres"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:padding="10dp"
+                android:id="@+id/tv_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</ScrollView>
